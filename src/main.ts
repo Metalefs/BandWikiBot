@@ -1,8 +1,25 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
+import { AppModule } from './app/app.module';
+//import { googleCredentials } from './env';
+//import * as fs from "fs";
+
+const admin = require('firebase-admin');
+
+//fs.writeFileSync('./google-credentials.json', googleCredentials);
+// const serviceAccount = require("./google-credentials.json");
+// admin.initializeApp({
+//   credential: admin.credential.cert('./google-credentials.json')
+// });
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  await app.listen(3000);
+  app.enableCors();
+  const globalPrefix = 'api';
+  app.setGlobalPrefix(globalPrefix);
+  const port = process.env.PORT || 3333;
+  await app.listen(port, '0.0.0.0');
 }
+
 bootstrap();
