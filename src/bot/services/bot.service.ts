@@ -83,7 +83,7 @@ export class BotService {
       const shortTextLength = MAX_MSG_TXT_LEN - reserveSpace;
       let shortText;
 
-      while ((shortText = message.substr(index, shortTextLength))) {
+      while ((shortText = message?.substr(index, shortTextLength))) {
         parts.push(shortText);
         index += shortTextLength;
       }
