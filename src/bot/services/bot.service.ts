@@ -45,12 +45,13 @@ export class BotService {
       'Buscando dados...'
     );
 
-    const result = await this.searchService.searchMetalArchives({name}) 
+    await this.searchService.searchMetalArchives({name}).then(async result=>{
+      await this.bot.sendMessage(
+        chatId,
+        JSON.stringify(result,null,4)
+      );
+    })
 
-    await this.bot.sendMessage(
-      chatId,
-      JSON.stringify(result,null,4)
-    );
   };
 
 
