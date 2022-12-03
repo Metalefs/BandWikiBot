@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Search results - Encyclopaedia Metallum: The Metal Archives</title>
+<title>Eminence - Encyclopaedia Metallum: The Metal Archives</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta content="width=device-width, initial-scale=1" name="viewport" />
 <link rel="stylesheet" type="text/css" href="/min/index.php?g=css" />
-<script type="f9106d3cefeb1e5a3c1bc564-text/javascript" src="/min/index.php?g=js"></script>
-<script type="f9106d3cefeb1e5a3c1bc564-text/javascript">
+<script type="8f289b1b000da7db2f693a60-text/javascript" src="/min/index.php?g=js"></script>
+<script type="8f289b1b000da7db2f693a60-text/javascript">
 			var URL_SITE	= 'https://www.metal-archives.com/';
 			var URL_IMAGES	= 'https://www.metal-archives.com/images/';
 			var URL_CSS		= 'https://www.metal-archives.com/css/';
@@ -29,7 +29,7 @@
 			<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
 			 <link rel="stylesheet" type="text/css" href="https://www.metal-archives.com/css/default/oldie.css" />
 		<![endif]-->
-<script type="f9106d3cefeb1e5a3c1bc564-text/javascript">
+<script type="8f289b1b000da7db2f693a60-text/javascript">
 			  var _gaq = _gaq || [];
 			  _gaq.push(['_setAccount', 'UA-4046749-4']);
 			  _gaq.push(['_trackPageview']);
@@ -50,9 +50,9 @@
 <form id="search_form" action="https://www.metal-archives.com/search" method="get">
 <div>
 <label>Search:</label><br />
-<input name="searchString" type="text" id="searchQueryBox" size="25" value="Eminence" tabindex="1" />
+<input name="searchString" type="text" id="searchQueryBox" size="25" value="" tabindex="1" />
 <select name="type" tabindex="2">
-<option value="band_name" selected="selected">Band name</option>
+<option value="band_name">Band name</option>
 <option value="band_genre">Music genre</option>
 <option value="band_themes">Lyrical themes</option>
 <option value="album_title">Album title</option>
@@ -63,7 +63,7 @@
 <option value="google">Google</option>
 </select>
 <br />
-<a href="https://www.metal-archives.com/search/advanced/?searchString=Eminence&type=band_name#bands" class="float_left" tabindex="4">Advanced search</a>
+<a href="https://www.metal-archives.com/search/advanced/?searchString=&type=" class="float_left" tabindex="4">Advanced search</a>
 <button type="submit" class="btn_submit float_right" tabindex="3">Submit</button>
 </div>
 </form>
@@ -80,7 +80,7 @@
 <li><a href="https://www.metal-archives.com/content/support">Support Us</a></li>
 <li><a href="https://www.metal-archives.com/content/tools">Add-ons</a></li>
 </ul>
- </div>
+</div>
 </div>
 <div id="left_col">
 <div id="member_box">
@@ -90,7 +90,7 @@
 <input type="text" name="loginUsername" />
 <label>Password</label><br />
 <input type="password" name="loginPassword" />
-<input type="hidden" name="origin" value="/search?searchString=Eminence&amp;type=band_name" />
+<input type="hidden" name="origin" value="/bands/Eminence/7140" />
 <button type="submit" class="btn_login float_right">Login</button>
 </div>
 </form>
@@ -137,61 +137,443 @@ Labels
 </div>
 </div>
 <div id="content_wrapper">
-<script type="f9106d3cefeb1e5a3c1bc564-text/javascript" src="https://www.metal-archives.com/js/jquery/jquery.dataTables.min.js"> </script>
-<script type="f9106d3cefeb1e5a3c1bc564-text/javascript">
+<script type="8f289b1b000da7db2f693a60-text/javascript" src="https://www.metal-archives.com/js/jquery/jquery.form.js"></script>
+<script type="8f289b1b000da7db2f693a60-text/javascript">
+	var bandId = 7140;
+	var bandName = "Eminence";
+	var minRecScore = 3;
+		
+		
+		
 	$(document).ready(function() {
-			createGrid(
-			"#searchResults", 200, 
-			"search/ajax-band-search/?field=name&query=Eminence", 
-			{ 
-				bSort: false,
-				oLanguage: { 
-				 	sProcessing: 'Searching, please wait...',
-				 	sEmptyTable: 'No matches found. Please try with different search terms. You could use wildcards (*) for more matches, or <a href="https://www.metal-archives.com/content/help?index=3">read more</a> about your search options.'
-				},
-				fnServerData: function ( sSource, aoData, fnCallback ) {
-					$.ajax( {
-						"dataType": 'json', 
-						"type": "GET", 
-						"url": sSource, 
-						"data": aoData, 
-						"success": function(result){
-							if (result.iTotalRecords == 1) { // redirect if 1 result only
-								var url = result.aaData[0][0];
-								reg = /"(.*?)"/g;
-								url = reg.exec(url);
-								url = url[0].replace(/\"/g, "");
-								//console.log(url);
-								location.href = url;
-							} else {
-								fnCallback(result); // draw the table
-							}
-						}
-					} );
-				}
-			}
-		);
-		});
+		$('.tabs, .tabs2lvl').tabs({ beforeLoad: cacheTab });
+		$(".no-js").removeClass("no-js");
+				 $('#band_members').tabs( { active : 1 } );		$(document).on('click', '.albumMenu', toggleAlbumMenu);
+				var browser = detectBrowser();
+		if(browser.name == "webkit" && parseFloat(browser.version) < 536) {
+			$('head').append( $('<style type="text/css">.releaseCol { width: 26%; }</style>'));
+		}
+	});
+
 </script>
-<h1 class="page_title">Search results for "Eminence"</h1>
-<h4>Searching bands by name</h4>
-<table id="searchResults" class="display" cellpadding="0" cellspacing="0">
-<thead>
-<tr>
-<th>Band name</th>
-<th>Genre</th>
-<th>Country</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-<p>
+<div id="band_sidebar">
+<div class="band_name_img">
+<a class="image" id="logo" title="Eminence" href="https://www.metal-archives.com/images/7/1/4/0/7140_logo.jpg"><img src="https://www.metal-archives.com/images/7/1/4/0/7140_logo.jpg" title="Click to zoom" alt="Eminence - Logo" border="0" /></a>
+</div>
+<div class="band_img">
+<a class="image" id="photo" title="Eminence" href="https://www.metal-archives.com/images/7/1/4/0/7140_photo.jpg?3042"><img src="https://www.metal-archives.com/images/7/1/4/0/7140_photo.jpg?3042" title="Click to zoom" alt="Eminence - Photo" border="0" /></a>
+</div>
+<div id="affiliation-links">
+<span class="title">Buy their stuff</span>
 <br />
-<strong>Tip</strong>: didn't find what you were looking for? Read more about your search options <a href="https://www.metal-archives.com/content/help?index=3">here</a>,
-or try the <a href="https://www.metal-archives.com/search/advanced?searchString=Eminence&type=band_name#bands">advanced search</a>.
-</p>
+<ul id="buyLinks" class="menu_style_5">
+<li>
+<a target="_blank" href="https://www.metal-archives.com/affiliate/?pid=3&bid=7140">Search on eBay</a>
+more... <a href="#more" onclick="if (!window.__cfRLUnblockHandlers) return false; $('#sub3').toggle(); return false;" data-cf-modified-8f289b1b000da7db2f693a60-="">>></a><br />
+<ul id="sub3" style="display: none; margin-top: 0px; margin-bottom: 0px;">
+<li><a target="_blank" href="https://www.metal-archives.com/affiliate/?pid=17&bid=7140">eBay Canada</a></li>
+<li><a target="_blank" href="https://www.metal-archives.com/affiliate/?pid=19&bid=7140">eBay UK</a></li>
+<li><a target="_blank" href="https://www.metal-archives.com/affiliate/?pid=57&bid=7140">eBay Germany</a></li>
+<li><a target="_blank" href="https://www.metal-archives.com/affiliate/?pid=18&bid=7140">eBay France</a></li>
+<li><a target="_blank" href="https://www.metal-archives.com/affiliate/?pid=36&bid=7140">eBay Spain</a></li>
+<li><a target="_blank" href="https://www.metal-archives.com/affiliate/?pid=34&bid=7140">eBay Belgium</a></li>
+<li><a target="_blank" href="https://www.metal-archives.com/affiliate/?pid=20&bid=7140">eBay Netherlands</a></li>
+<li><a target="_blank" href="https://www.metal-archives.com/affiliate/?pid=21&bid=7140">eBay Italy</a></li>
+<li><a target="_blank" href="https://www.metal-archives.com/affiliate/?pid=22&bid=7140">eBay Australia</a></li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
-<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="f9106d3cefeb1e5a3c1bc564-|49" defer=""></script></body>
+<div id="band_content">
+<div class="tool_strip right writeAction">
+<ul>
+<li><a title="Report a mistake or additional information for this page" href="javascript:popupReportDialog(1, 7140);" class="btn_report_error"> </a></li>
+</ul>
+</div>
+<div id="band_info">
+<h1 class="band_name"><a href="https://www.metal-archives.com/bands/Eminence/7140">Eminence</a></h1>
+<div class="clear block_spacer_5"></div>
+<div id="band_stats">
+<dl class="float_left">
+<dt>Country of origin:</dt>
+<dd><a href="https://www.metal-archives.com/lists/BR">Brazil</a></dd>
+<dt>Location:</dt>
+<dd>Belo Horizonte, Minas Gerais</dd>
+<dt>Status:</dt>
+<dd class="active">Active</dd>
+<dt>Formed in:</dt>
+<dd>1995</dd>
+</dl>
+<dl class="float_right">
+<dt>Genre:</dt>
+<dd>Death/Thrash/Groove Metal</dd>
+<dt>Lyrical themes:</dt>
+<dd>Personal issues, Devil, Radiation</dd>
+<dt>Current label:</dt>
+<dd><a href="https://www.metal-archives.com/labels/Blood_Blast_Distribution/52933">Blood Blast Distribution</a></dd>
+</dl>
+<dl style="width: 100%;" class="clear">
+<dt>Years active:</dt>
+<dd>
+1995-present </dd>
+</dl>
+</div>
+<div class="band_comment clear">
+
+<b>Contact:</b> <a href="/cdn-cgi/l/email-protection#4a2f2723242f24292f642f2723242f24292f0a2d272b232664292527"><span class="__cf_email__" data-cfemail="6401090d0a010a07014a01090d0a010a0701240309050d084a070b09">[email&#160;protected]</span></a><br />
+<br />
+<b>Compilation appearances:</b><br />
+- "Citizen Zero" on <i>Dynamit Vol. 44</i> (<a href="https://www.metal-archives.com/labels/Rock_Hard/2601">Rock Hard</a>, 2004)<br />
+- "Citizen Zero" on <i>Le Sampler RockHard NÂ°43</i> (<a href="https://www.metal-archives.com/labels/Rock_Hard/2601">Rock Hard</a>, 2005)<br />
+- "Day 7" on <i>Le Sampler RockHard #76</i> (<a href="https://www.metal-archives.com/labels/Rock_Hard/2601">Rock Hard</a>, 2008)<br />
+- "Resistance" on <i>Hard Rock Sampler 12</i> (Hard Rock, 2008)
+</div>
+</div>
+
+<div id="message"> </div>
+<div class="clear block_spacer_5"> </div>
+<div id="band_tabs" class="tabs no-js">
+<ul>
+<li><a href="#band_tab_discography">Discography</a></li>
+<li><a href="#band_tab_members">Members</a></li>
+<li><a href="https://www.metal-archives.com/band/ajax-reviews/id/7140" title="Reviews"><span>Reviews</span></a></li>
+<li><a href="https://www.metal-archives.com/band/ajax-recommendations/id/7140" title="Similar artists"><span>Similar Artists</span></a></li>
+<li><a href="https://www.metal-archives.com/link/ajax-list/type/band/id/7140" title="Related links"><span>Related Links</span></a></li>
+</ul>
+<div id="band_tab_discography">
+<div id="band_disco" class="tabs2lvl">
+<ul>
+<li><a href="https://www.metal-archives.com/band/discography/id/7140/tab/all"><span>Complete discography</span></a></li>
+<li><a href="https://www.metal-archives.com/band/discography/id/7140/tab/main"><span>Main</span></a></li>
+<li><a href="https://www.metal-archives.com/band/discography/id/7140/tab/lives"><span>Lives</span></a></li>
+<li><a href="https://www.metal-archives.com/band/discography/id/7140/tab/demos"><span>Demos</span></a></li>
+<li><a href="https://www.metal-archives.com/band/discography/id/7140/tab/misc"><span>Misc.</span></a></li>
+</ul>
+</div>
+</div>
+<div id="band_tab_members">
+<div id="band_members" class="tabs2lvl">
+<ul>
+<li><a href="#band_tab_members_all">Complete lineup</a></li> <li><a href="#band_tab_members_current">Current lineup</a></li>
+<li><a href="#band_tab_members_past">Past members</a></li> </ul>
+
+<div id="band_tab_members_all">
+<div class="ui-tabs-panel-content">
+<table class="display lineupTable" cellpadding="0" cellspacing="0">
+<tr class="lineupHeaders">
+<td colspan="2" align="right">
+Current </td>
+</tr>
+<tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Davidson_Mainart/610845" class="bold">Davidson Mainart</a>
+</td>
+<td>
+Bass </td>
+</tr>
+<tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Alan_Wallace_Bello/75672" class="bold">Alan Wallace Bello</a>
+</td>
+<td>
+Guitars&nbsp;(1995-present) </td>
+</tr>
+<tr class="lineupBandsRow">
+<td colspan="2">
+See also:
+<a href="https://www.metal-archives.com/bands/The_Unabomber_Files/3540365011">The Unabomber Files</a>, ex-<a href="https://www.metal-archives.com/bands/Disease/23958">Disease</a> </td>
+</tr>
+<tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Bruno_Paraguay/75671" class="bold">Bruno Paraguay</a>
+</td>
+<td>
+Vocals&nbsp;(2009-present) </td>
+</tr>
+<tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Alexandre_Oliveira/867896" class="bold">Alexandre Oliveira</a>
+</td>
+<td>
+Drums&nbsp;(2020-present) </td>
+</tr>
+<tr class="lineupBandsRow">
+<td colspan="2">
+See also:
+<a href="https://www.metal-archives.com/bands/The_Troops_of_Doom/3540472381">The Troops of Doom</a>, Raising Conviction, The Southern Blacklist </td>
+</tr>
+<tr class="lineupHeaders">
+<td colspan="2" align="right">
+Past </td>
+</tr>
+<tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Rico/75684" class="bold">Rico</a>
+</td>
+<td>
+Bass </td>
+</tr>
+<tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Beto_Ferris/75677" class="bold">Beto Ferris</a>
+</td>
+<td>
+Vocals&nbsp;(1997-2002) </td>
+</tr>
+<tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Jairo_Guedz/4492" class="bold">Jairo Guedz</a>
+</td>
+<td>
+Bass&nbsp;(1999-2006) </td>
+</tr>
+<tr class="lineupBandsRow">
+<td colspan="2">
+See also:
+<a href="https://www.metal-archives.com/bands/The_Troops_of_Doom/3540472381">The Troops of Doom</a>, ex-<a href="https://www.metal-archives.com/bands/Guerrilha/3540262945">Guerrilha</a>, Metallica Cover Brazil, The Southern Blacklist, ex-<a href="https://www.metal-archives.com/bands/Overdose/248">Overdose</a>, ex-<a href="https://www.metal-archives.com/bands/Sepultura/78">Sepultura</a>, ex-<a href="https://www.metal-archives.com/bands/The_Mist/7100">The Mist</a>, ex-Mantas </td>
+</tr>
+<tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Adolfo_Americano/37007" class="bold">Adolfo Americano</a>
+</td>
+<td>
+Drums&nbsp;(1999-2002) </td>
+</tr>
+<tr class="lineupBandsRow">
+<td colspan="2">
+See also:
+ex-<a href="https://www.metal-archives.com/bands/Insulter/40722">Insulter</a>, ex-<a href="https://www.metal-archives.com/bands/Megathrash/2533">Megathrash</a> </td>
+</tr>
+<tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Z%C3%A9_Baleia/36464" class="bold">Andr&eacute; M&aacute;rcio</a>
+</td>
+<td>
+Drums&nbsp;(2002-?) </td>
+</tr>
+<tr class="lineupBandsRow">
+<td colspan="2">
+See also:
+<a href="https://www.metal-archives.com/bands/The_Unabomber_Files/3540365011">The Unabomber Files</a>, ex-<a href="https://www.metal-archives.com/bands/Armmagedon/125990">Armmagedon</a>, ex-<a href="https://www.metal-archives.com/bands/D.E.T.H./3540259822">D.E.T.H.</a>, ex-<a href="https://www.metal-archives.com/bands/Overdose/248">Overdose</a> </td>
+</tr>
+<tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Wallace_Parreiras/75680" class="bold">Wallace Parreiras</a>
+</td>
+<td>
+Vocals&nbsp;(2002-2009) </td>
+</tr>
+<tr class="lineupBandsRow">
+<td colspan="2">
+See also:
+ex-<a href="https://www.metal-archives.com/bands/Soulless/12801">Soulless</a>, The Southern Blacklist </td>
+</tr>
+ <tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Rodrigo_Nunes/75683" class="bold">Rodrigo Nunes</a>
+</td>
+<td>
+Bass&nbsp;(2006-2007) </td>
+</tr>
+<tr class="lineupBandsRow">
+<td colspan="2">
+See also:
+<a href="https://www.metal-archives.com/bands/Drowned/2071">Drowned</a>, ex-<a href="https://www.metal-archives.com/bands/Preceptor/107874">Preceptor</a>, ex-<a href="https://www.metal-archives.com/bands/Absolute_Disgrace/5126">Absolute Disgrace</a> </td>
+</tr>
+<tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Thiago_Correa/461141" class="bold">Thiago Correa</a>
+</td>
+<td>
+Bass&nbsp;(2007-2008, 2012-?) </td>
+</tr>
+<tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Bernardo_Gosaric/75674" class="bold">Bernardo Gosaric</a>
+</td>
+<td>
+Bass&nbsp;(2009-2012) </td>
+</tr>
+<tr class="lineupBandsRow">
+<td colspan="2">
+See also:
+<a href="https://www.metal-archives.com/bands/Overdose/248">Overdose</a>, ex-<a href="https://www.metal-archives.com/bands/Perpetual_Dusk/15271">Perpetual Dusk</a>, ex-<a href="https://www.metal-archives.com/bands/Agaurez/8934">Agaurez</a>, ex-<a href="https://www.metal-archives.com/bands/Impurity/3599">Impurity</a>, ex-<a href="https://www.metal-archives.com/bands/Absolute_Disgrace/5126">Absolute Disgrace</a>, ex-<a href="https://www.metal-archives.com/bands/Hell_Trucker/15935">Hell Trucker</a> </td>
+</tr>
+</table>
+</div>
+</div>
+
+<div id="band_tab_members_current">
+<div class="ui-tabs-panel-content">
+<table class="display lineupTable" cellpadding="0" cellspacing="0">
+<tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Davidson_Mainart/610845" class="bold">Davidson Mainart</a>
+</td>
+<td>
+Bass </td>
+</tr>
+<tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Alan_Wallace_Bello/75672" class="bold">Alan Wallace Bello</a>
+</td>
+<td>
+Guitars&nbsp;(1995-present) </td>
+</tr>
+<tr class="lineupBandsRow">
+<td colspan="2">
+See also:
+<a href="https://www.metal-archives.com/bands/The_Unabomber_Files/3540365011">The Unabomber Files</a>, ex-<a href="https://www.metal-archives.com/bands/Disease/23958">Disease</a> </td>
+</tr>
+<tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Bruno_Paraguay/75671" class="bold">Bruno Paraguay</a>
+</td>
+<td>
+Vocals&nbsp;(2009-present) </td>
+</tr>
+<tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Alexandre_Oliveira/867896" class="bold">Alexandre Oliveira</a>
+</td>
+<td>
+Drums&nbsp;(2020-present) </td>
+</tr>
+<tr class="lineupBandsRow">
+<td colspan="2">
+See also:
+<a href="https://www.metal-archives.com/bands/The_Troops_of_Doom/3540472381">The Troops of Doom</a>, Raising Conviction, The Southern Blacklist </td>
+</tr>
+</table>
+</div>
+</div>
+
+<div id="band_tab_members_past">
+<div class="ui-tabs-panel-content">
+ <table class="display lineupTable" cellpadding="0" cellspacing="0">
+<tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Rico/75684" class="bold">Rico</a>
+</td>
+<td>
+Bass </td>
+</tr>
+<tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Beto_Ferris/75677" class="bold">Beto Ferris</a>
+</td>
+<td>
+Vocals&nbsp;(1997-2002) </td>
+</tr>
+<tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Jairo_Guedz/4492" class="bold">Jairo Guedz</a>
+</td>
+<td>
+Bass&nbsp;(1999-2006) </td>
+</tr>
+<tr class="lineupBandsRow">
+<td colspan="2">
+See also:
+<a href="https://www.metal-archives.com/bands/The_Troops_of_Doom/3540472381">The Troops of Doom</a>, ex-<a href="https://www.metal-archives.com/bands/Guerrilha/3540262945">Guerrilha</a>, Metallica Cover Brazil, The Southern Blacklist, ex-<a href="https://www.metal-archives.com/bands/Overdose/248">Overdose</a>, ex-<a href="https://www.metal-archives.com/bands/Sepultura/78">Sepultura</a>, ex-<a href="https://www.metal-archives.com/bands/The_Mist/7100">The Mist</a>, ex-Mantas </td>
+</tr>
+<tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Adolfo_Americano/37007" class="bold">Adolfo Americano</a>
+</td>
+<td>
+Drums&nbsp;(1999-2002) </td>
+</tr>
+<tr class="lineupBandsRow">
+<td colspan="2">
+See also:
+ex-<a href="https://www.metal-archives.com/bands/Insulter/40722">Insulter</a>, ex-<a href="https://www.metal-archives.com/bands/Megathrash/2533">Megathrash</a> </td>
+</tr>
+<tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Z%C3%A9_Baleia/36464" class="bold">Andr&eacute; M&aacute;rcio</a>
+</td>
+<td>
+Drums&nbsp;(2002-?) </td>
+</tr>
+<tr class="lineupBandsRow">
+<td colspan="2">
+See also:
+<a href="https://www.metal-archives.com/bands/The_Unabomber_Files/3540365011">The Unabomber Files</a>, ex-<a href="https://www.metal-archives.com/bands/Armmagedon/125990">Armmagedon</a>, ex-<a href="https://www.metal-archives.com/bands/D.E.T.H./3540259822">D.E.T.H.</a>, ex-<a href="https://www.metal-archives.com/bands/Overdose/248">Overdose</a> </td>
+</tr>
+<tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Wallace_Parreiras/75680" class="bold">Wallace Parreiras</a>
+</td>
+<td>
+Vocals&nbsp;(2002-2009) </td>
+</tr>
+<tr class="lineupBandsRow">
+<td colspan="2">
+See also:
+ex-<a href="https://www.metal-archives.com/bands/Soulless/12801">Soulless</a>, The Southern Blacklist </td>
+</tr>
+<tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Rodrigo_Nunes/75683" class="bold">Rodrigo Nunes</a>
+</td>
+<td>
+Bass&nbsp;(2006-2007) </td>
+</tr>
+<tr class="lineupBandsRow">
+<td colspan="2">
+See also:
+<a href="https://www.metal-archives.com/bands/Drowned/2071">Drowned</a>, ex-<a href="https://www.metal-archives.com/bands/Preceptor/107874">Preceptor</a>, ex-<a href="https://www.metal-archives.com/bands/Absolute_Disgrace/5126">Absolute Disgrace</a> </td>
+</tr>
+<tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Thiago_Correa/461141" class="bold">Thiago Correa</a>
+</td>
+<td>
+Bass&nbsp;(2007-2008, 2012-?) </td>
+</tr>
+<tr class="lineupRow">
+<td width="200" valign="top">
+<a href="https://www.metal-archives.com/artists/Bernardo_Gosaric/75674" class="bold">Bernardo Gosaric</a>
+</td>
+<td>
+Bass&nbsp;(2009-2012) </td>
+</tr>
+<tr class="lineupBandsRow">
+<td colspan="2">
+See also:
+<a href="https://www.metal-archives.com/bands/Overdose/248">Overdose</a>, ex-<a href="https://www.metal-archives.com/bands/Perpetual_Dusk/15271">Perpetual Dusk</a>, ex-<a href="https://www.metal-archives.com/bands/Agaurez/8934">Agaurez</a>, ex-<a href="https://www.metal-archives.com/bands/Impurity/3599">Impurity</a>, ex-<a href="https://www.metal-archives.com/bands/Absolute_Disgrace/5126">Absolute Disgrace</a>, ex-<a href="https://www.metal-archives.com/bands/Hell_Trucker/15935">Hell Trucker</a> </td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="auditTrail">
+<table>
+<tr>
+<td>Added by: <a href="https://www.metal-archives.com/users/MetalThunder" class="profileMenu">MetalThunder</a></td>
+<td align="right">Modified by: <a href="https://www.metal-archives.com/users/Mole666" class="profileMenu">Mole666</a></td>
+</tr>
+<tr>
+<td>Added on: 2003-02-03 23:05:28</td>
+<td align="right">Last modified on: 2022-11-03 08:58:28</td>
+</tr>
+<tr>
+<td valign="top">
+&nbsp;
+</td>
+<td align="right" valign="top">
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="readMoreDialog" title="Additional notes" class="displayNone"> </div>
+</div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="8f289b1b000da7db2f693a60-|49" defer=""></script></body>
 </html>

@@ -5,6 +5,7 @@ import { Scraper } from './interfaces/scraper';
 
 import got from 'got';
 import { IAlbum, IBandMember, ISong } from './interfaces/IBand';
+import * as fs from 'fs';
 
 export class MetalArchivesScraper implements Scraper {
   constructor() {
@@ -28,6 +29,10 @@ export class MetalArchivesScraper implements Scraper {
     const searchResult: bandSearch = new bandSearch();
 
     const root = parse(html);
+    fs.writeFileSync(
+        `./src/tests/bot/results/scrape/result.html`,
+        html
+      );
     try {
         searchResult.name = root.querySelector('h1 a').text;
         searchResult.genres = root.querySelector('#band_stats > dl.float_right > dd:nth-child(2)')?.text;
@@ -38,10 +43,12 @@ export class MetalArchivesScraper implements Scraper {
         searchResult.link = query;
         searchResult.about = root.querySelector('.band_comment.clear').text;        
         
-        const membersTr = root.querySelectorAll('#band_tab_members_all > div > table > tbody > tr.lineupRow');
+        const membersTr = root.querySelectorAll('tr.lineupRow');
         
         searchResult.members = [];
         
+        console.log(membersTr)
+
         for (const member of membersTr){
             console.log('member', member)
             const [age,placeOfBirth] = await this.getMemberAgeAndPlaceOfBirth(member.querySelector('td a').getAttribute('href'))
@@ -120,8 +127,8 @@ export class MetalArchivesScraper implements Scraper {
 
     const album:any = {};
 
-    album.name = root.querySelector('#album_info > h1 > a').text;
-    album.date = root.querySelector('#album_info > dl.float_left > dd:nth-child(4)').text;
+    album.name = root.querySelector('#album_info > h1 > a')?.text;
+    album.date = root.querySelector('#album_info > dl.float_left > dd:nth-child(4)')?.text;
     
     const songsTr = root.querySelectorAll('#album_tabs_tracklist > div.ui-tabs-panel-content.block_spacer_top_20 > table tr');
     album.songs = [];
@@ -133,8 +140,8 @@ export class MetalArchivesScraper implements Scraper {
                 lyrics = await this.getSongLyrics(link)
             album.songs.push(
                 {
-                    name: song.childNodes[2].text,
-                    duration: song.childNodes[3].text,
+                    name: song.childNodes[2]?.text,
+                    duration: song.childNodes[3]?.text,
                     lyrics
                 } as ISong
             )

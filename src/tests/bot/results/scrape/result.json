@@ -1,5 +1,5 @@
 {
-    "duration": 2961.719200015068,
+    "duration": 29144.219999969006,
     "data": {
         "name": "Eminence",
         "genres": "Death/Thrash/Groove Metal",
@@ -11,7 +11,190 @@
             "name": "Eminence"
         },
         "about": "\n\nContact: [email protected]\n\nCompilation appearances:\n- \"Citizen Zero\" on Dynamit Vol. 44 (Rock Hard, 2004)\n- \"Citizen Zero\" on Le Sampler RockHard NÂ°43 (Rock Hard, 2005)\n- \"Day 7\" on Le Sampler RockHard #76 (Rock Hard, 2008)\n- \"Resistance\" on Hard Rock Sampler 12 (Hard Rock, 2008)\n",
-        "members": [],
+        "members": [
+            {
+                "name": "Davidson Mainart",
+                "role": "\nBass ",
+                "wiki": "https://www.metal-archives.com/artists/Davidson_Mainart/610845",
+                "age": " N/A ",
+                "placeOfBirth": " Brazil (Sete Lagoas, Minas Gerais) "
+            },
+            {
+                "name": "Alan Wallace Bello",
+                "role": "\nGuitars (1995-present) ",
+                "wiki": "https://www.metal-archives.com/artists/Alan_Wallace_Bello/75672",
+                "age": " N/A ",
+                "placeOfBirth": " Brazil (Rio de Janeiro, Rio de Janeiro) "
+            },
+            {
+                "name": "Bruno Paraguay",
+                "role": "\nVocals (2009-present) ",
+                "wiki": "https://www.metal-archives.com/artists/Bruno_Paraguay/75671",
+                "age": " 38 (born Oct 28th, 1984) ",
+                "placeOfBirth": " Brazil (Belo Horizonte, Minas Gerais) "
+            },
+            {
+                "name": "Alexandre Oliveira",
+                "role": "\nDrums (2020-present) ",
+                "wiki": "https://www.metal-archives.com/artists/Alexandre_Oliveira/867896",
+                "age": " N/A ",
+                "placeOfBirth": " Brazil (Belo Horizonte, Minas Gerais) "
+            },
+            {
+                "name": "Rico",
+                "role": "\nBass ",
+                "wiki": "https://www.metal-archives.com/artists/Rico/75684",
+                "age": " N/A ",
+                "placeOfBirth": " Brazil "
+            },
+            {
+                "name": "Beto Ferris",
+                "role": "\nVocals (1997-2002) ",
+                "wiki": "https://www.metal-archives.com/artists/Beto_Ferris/75677",
+                "age": " N/A ",
+                "placeOfBirth": " Brazil "
+            },
+            {
+                "name": "Jairo Guedz",
+                "role": "\nBass (1999-2006) ",
+                "wiki": "https://www.metal-archives.com/artists/Jairo_Guedz/4492",
+                "age": " 54 (born Nov 25th, 1968) ",
+                "placeOfBirth": " Brazil (JoÃ£o Monlevade, Minas Gerais) "
+            },
+            {
+                "name": "Adolfo Americano",
+                "role": "\nDrums (1999-2002) ",
+                "wiki": "https://www.metal-archives.com/artists/Adolfo_Americano/37007",
+                "age": " N/A ",
+                "placeOfBirth": " Brazil "
+            },
+            {
+                "name": "André Márcio",
+                "role": "\nDrums (2002-?) ",
+                "wiki": "https://www.metal-archives.com/artists/Z%C3%A9_Baleia/36464",
+                "age": " N/A ",
+                "placeOfBirth": " Brazil (Belo Horizonte, Minas Gerais) "
+            },
+            {
+                "name": "Wallace Parreiras",
+                "role": "\nVocals (2002-2009) ",
+                "wiki": "https://www.metal-archives.com/artists/Wallace_Parreiras/75680",
+                "age": " N/A ",
+                "placeOfBirth": " Brazil (Belo Horizonte, Minas Gerais) "
+            },
+            {
+                "name": "Rodrigo Nunes",
+                "role": "\nBass (2006-2007) ",
+                "wiki": "https://www.metal-archives.com/artists/Rodrigo_Nunes/75683",
+                "age": " N/A ",
+                "placeOfBirth": " Brazil (Belo Horizonte, Minas Gerais) "
+            },
+            {
+                "name": "Thiago Correa",
+                "role": "\nBass (2007-2008, 2012-?) ",
+                "wiki": "https://www.metal-archives.com/artists/Thiago_Correa/461141",
+                "age": " N/A ",
+                "placeOfBirth": " Brazil "
+            },
+            {
+                "name": "Bernardo Gosaric",
+                "role": "\nBass (2009-2012) ",
+                "wiki": "https://www.metal-archives.com/artists/Bernardo_Gosaric/75674",
+                "age": " 39 (born Nov 12th, 1983) ",
+                "placeOfBirth": " Brazil (Belo Horizonte, Minas Gerais) "
+            },
+            {
+                "name": "Davidson Mainart",
+                "role": "\nBass ",
+                "wiki": "https://www.metal-archives.com/artists/Davidson_Mainart/610845",
+                "age": " N/A ",
+                "placeOfBirth": " Brazil (Sete Lagoas, Minas Gerais) "
+            },
+            {
+                "name": "Alan Wallace Bello",
+                "role": "\nGuitars (1995-present) ",
+                "wiki": "https://www.metal-archives.com/artists/Alan_Wallace_Bello/75672",
+                "age": " N/A ",
+                "placeOfBirth": " Brazil (Rio de Janeiro, Rio de Janeiro) "
+            },
+            {
+                "name": "Bruno Paraguay",
+                "role": "\nVocals (2009-present) ",
+                "wiki": "https://www.metal-archives.com/artists/Bruno_Paraguay/75671",
+                "age": " 38 (born Oct 28th, 1984) ",
+                "placeOfBirth": " Brazil (Belo Horizonte, Minas Gerais) "
+            },
+            {
+                "name": "Alexandre Oliveira",
+                "role": "\nDrums (2020-present) ",
+                "wiki": "https://www.metal-archives.com/artists/Alexandre_Oliveira/867896",
+                "age": " N/A ",
+                "placeOfBirth": " Brazil (Belo Horizonte, Minas Gerais) "
+            },
+            {
+                "name": "Rico",
+                "role": "\nBass ",
+                "wiki": "https://www.metal-archives.com/artists/Rico/75684",
+                "age": " N/A ",
+                "placeOfBirth": " Brazil "
+            },
+            {
+                "name": "Beto Ferris",
+                "role": "\nVocals (1997-2002) ",
+                "wiki": "https://www.metal-archives.com/artists/Beto_Ferris/75677",
+                "age": " N/A ",
+                "placeOfBirth": " Brazil "
+            },
+            {
+                "name": "Jairo Guedz",
+                "role": "\nBass (1999-2006) ",
+                "wiki": "https://www.metal-archives.com/artists/Jairo_Guedz/4492",
+                "age": " 54 (born Nov 25th, 1968) ",
+                "placeOfBirth": " Brazil (JoÃ£o Monlevade, Minas Gerais) "
+            },
+            {
+                "name": "Adolfo Americano",
+                "role": "\nDrums (1999-2002) ",
+                "wiki": "https://www.metal-archives.com/artists/Adolfo_Americano/37007",
+                "age": " N/A ",
+                "placeOfBirth": " Brazil "
+            },
+            {
+                "name": "André Márcio",
+                "role": "\nDrums (2002-?) ",
+                "wiki": "https://www.metal-archives.com/artists/Z%C3%A9_Baleia/36464",
+                "age": " N/A ",
+                "placeOfBirth": " Brazil (Belo Horizonte, Minas Gerais) "
+            },
+            {
+                "name": "Wallace Parreiras",
+                "role": "\nVocals (2002-2009) ",
+                "wiki": "https://www.metal-archives.com/artists/Wallace_Parreiras/75680",
+                "age": " N/A ",
+                "placeOfBirth": " Brazil (Belo Horizonte, Minas Gerais) "
+            },
+            {
+                "name": "Rodrigo Nunes",
+                "role": "\nBass (2006-2007) ",
+                "wiki": "https://www.metal-archives.com/artists/Rodrigo_Nunes/75683",
+                "age": " N/A ",
+                "placeOfBirth": " Brazil (Belo Horizonte, Minas Gerais) "
+            },
+            {
+                "name": "Thiago Correa",
+                "role": "\nBass (2007-2008, 2012-?) ",
+                "wiki": "https://www.metal-archives.com/artists/Thiago_Correa/461141",
+                "age": " N/A ",
+                "placeOfBirth": " Brazil "
+            },
+            {
+                "name": "Bernardo Gosaric",
+                "role": "\nBass (2009-2012) ",
+                "wiki": "https://www.metal-archives.com/artists/Bernardo_Gosaric/75674",
+                "age": " 39 (born Nov 12th, 1983) ",
+                "placeOfBirth": " Brazil (Belo Horizonte, Minas Gerais) "
+            }
+        ],
         "discography": {
             "albums": [
                 {
@@ -65,6 +248,802 @@
                         {
                             "name": "\n",
                             "duration": "(loading lyrics...)"
+                        }
+                    ]
+                },
+                {
+                    "name": "Faces",
+                    "date": "May 1997",
+                    "songs": [
+                        {
+                            "name": "\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nFaces\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nRota\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nMaybe Someday\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nUnder the Sight of Terror\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nBorn to Be Wild (Steppenwolf cover)\n",
+                            "lyrics": "\n<em>(lyrics not available)</em>\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "25:21"
+                        }
+                    ]
+                },
+                {
+                    "name": "Eminence",
+                    "date": "May 21st, 1998",
+                    "songs": [
+                        {
+                            "name": "\n",
+                            "duration": "\nNew\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nW.I.T.W.C.F.?\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nBody Bag\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nThis Is Us\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nPsychotic Slave\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nFaces\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nRota\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "23:47"
+                        }
+                    ]
+                },
+                {
+                    "name": "Chaotic System",
+                    "date": "October 9th, 1999",
+                    "songs": [
+                        {
+                            "name": "\n",
+                            "duration": "\nChaotic Creation\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nHidden Facts\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nThe Human Control\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nCodes of Imorality\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nHarmonizer\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nNew\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nPsycho Panic\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nRota\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nFaces\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nThink About It\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nWITWCF?\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nBody Bag\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\n#13\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "40:54"
+                        }
+                    ]
+                },
+                {
+                    "name": "Humanology",
+                    "date": "August 12th, 2003",
+                    "songs": [
+                        {
+                            "name": "\n",
+                            "duration": "\nB.O.H.1\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nEvolution\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nOverload\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nHumanology\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nCitizen Zero\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\n6ix Degrees\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nGreenspirit\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nLike I Hate You\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nGreed as a Pig\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nLeech 9\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nThe Freak I Become\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nCreep\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nDemocrasick\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nOnefortyfive\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nHawking Radiation\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nCoward\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\n17253017\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "57:20"
+                        }
+                    ]
+                },
+                {
+                    "name": "The God of All Mistakes",
+                    "date": "April 20th, 2008",
+                    "songs": [
+                        {
+                            "name": "\n",
+                            "duration": "\nThe God of All Mistakes\n",
+                            "lyrics": "\n<em>(lyrics not available)</em>\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nResistance\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nDay 7\n",
+                            "lyrics": "\n<em>(lyrics not available)</em>\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nDevil's Boulevard\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nUndermind\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nInjected Lies\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nWritten in Dust\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nSnake Beat\n",
+                            "lyrics": "\n<em>(lyrics not available)</em>\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nStainer\n",
+                            "lyrics": "\n<em>(lyrics not available)</em>\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nEnemy Inside\n",
+                            "lyrics": "\n<em>(lyrics not available)</em>\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "37:14"
+                        }
+                    ]
+                },
+                {
+                    "name": "The God of All Mistakes",
+                    "date": "July 28th, 2009",
+                    "songs": [
+                        {
+                            "name": "\n",
+                            "duration": "\nThe God of All Mistakes\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "04:06"
+                        }
+                    ]
+                },
+                {
+                    "name": "Live Conexao Vivo",
+                    "date": "2012",
+                    "songs": [
+                        {
+                            "name": "\n",
+                            "duration": "\nThe God of All Mistakes\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nResistance\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nOverload and Citizen Zero\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nHumanology\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nEvolution\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "24:30"
+                        }
+                    ]
+                },
+                {
+                    "name": "The Stalker",
+                    "date": "August 13th, 2013",
+                    "songs": [
+                        {
+                            "name": "\n",
+                            "duration": "\nSelf Rejection\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nUnfold\n",
+                            "lyrics": "\n<em>(lyrics not available)</em>\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\n3 Times 6\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nAtmosphere (Intro)\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nVeins of Memories\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nThe Stalker\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nEyetricity\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nMutation\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nCritical Path\n",
+                            "lyrics": "\n<em>(lyrics not available)</em>\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nNo Code\n",
+                            "lyrics": "\n<em>(lyrics not available)</em>\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nVisions of Hate\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "36:48"
+                        }
+                    ]
+                },
+                {
+                    "name": "Minds Apart",
+                    "date": "August 27th, 2018",
+                    "songs": [
+                        {
+                            "name": "\n",
+                            "duration": "\nObey\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nFace It\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nMinds Apart\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nDigi-Illusion\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "13:41"
+                        }
+                    ]
+                },
+                {
+                    "name": "Dark Echoes",
+                    "date": "May 28th, 2021",
+                    "songs": [
+                        {
+                            "name": "\n",
+                            "duration": "\nDark Echoes\n",
+                            "lyrics": "\n<em>(lyrics not available)</em>\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nBurn It Again\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nB.Y.O.G\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nWake Up the Blind\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nInto the Ashes\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nThe Vanishing\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nInner Suffering\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nDeath of a Nation\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nThe Hologram\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nN3mbers\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nNot Hating Just Saying\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "\nParasite Planet\n"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "(loading lyrics...)"
+                        },
+                        {
+                            "name": "\n",
+                            "duration": "39:16"
                         }
                     ]
                 }
