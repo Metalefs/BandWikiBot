@@ -1,11 +1,11 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app/app.module';
+import { AppModule } from './app.module';
 //import { googleCredentials } from './env';
 //import * as fs from "fs";
 
-const admin = require('firebase-admin');
+//const admin = require('firebase-admin');
 
 //fs.writeFileSync('./google-credentials.json', googleCredentials);
 // const serviceAccount = require("./google-credentials.json");

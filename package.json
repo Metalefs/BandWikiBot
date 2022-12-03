@@ -36,6 +36,7 @@
     "mongo-autoincrement": "^1.0.1",
     "mongodb": "^4.12.1",
     "node-html-parser": "^6.1.4",
+    "node-telegram-bot-api": "^0.60.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.5.5"
   },
