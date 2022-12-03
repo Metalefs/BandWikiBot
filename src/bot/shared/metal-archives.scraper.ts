@@ -38,7 +38,7 @@ export class MetalArchivesScraper implements Scraper {
         searchResult.genres = root.querySelector('#band_stats > dl.float_right > dd:nth-child(2)')?.text;
         searchResult.themes = root.querySelector('#band_stats > dl.float_right > dd:nth-child(4)')?.text;
         searchResult.status = root.querySelector('#band_stats > dl.float_left > dd.active')?.text;
-        searchResult.startDate = root.querySelector('#band_stats > dl.clear > dt')?.text;
+        searchResult.startDate = root.querySelector('#band_stats > dl.clear > dd')?.text;
         searchResult.label = root.querySelector('#band_stats > dl.float_right > dd:nth-child(6) > a')?.text;        
         searchResult.link = query;
         searchResult.about = root.querySelector('.band_comment.clear').text;        
@@ -140,8 +140,8 @@ export class MetalArchivesScraper implements Scraper {
                 lyrics = await this.getSongLyrics(link)
             album.songs.push(
                 {
-                    name: song.childNodes[2]?.text,
-                    duration: song.childNodes[3]?.text,
+                    name: song.childNodes[3]?.text,
+                    duration: song.childNodes[4]?.text,
                     lyrics
                 } as ISong
             )
