@@ -40,6 +40,10 @@ export class BotService {
       );
       return;
     }
+    await this.bot.sendMessage(
+      chatId,
+      'Buscando dados...'
+    );
 
     const result = await this.searchService.searchMetalArchives({name}) 
 
