@@ -71,6 +71,7 @@ export class BotService {
     const self = this.bot;
 
     return async function (chatId, message, form:any = {}) {
+      if(!message) message = 'empty'
       if (message.length < MAX_MSG_TXT_LEN) {
         return sendMessage.call(self, chatId, message, form);
       }
