@@ -4,8 +4,7 @@ import { config } from '../config';
 import { Scraper } from './interfaces/scraper';
 
 import got from 'got';
-import { IAlbum, IBandMember, ISong } from './interfaces/IBand';
-import * as fs from 'fs';
+import { IBandMember, ISong } from './interfaces/IBand';
 
 export class MetalArchivesScraper implements Scraper {
   constructor() {
@@ -29,10 +28,7 @@ export class MetalArchivesScraper implements Scraper {
     const searchResult: bandSearch = new bandSearch();
 
     const root = parse(html);
-    fs.writeFileSync(
-        `./src/tests/bot/results/scrape/result.html`,
-        html
-      );
+  
     try {
         searchResult.name = root.querySelector('h1 a').text;
         searchResult.genres = root.querySelector('#band_stats > dl.float_right > dd:nth-child(2)')?.text;
@@ -61,7 +57,7 @@ export class MetalArchivesScraper implements Scraper {
                     wiki: member.querySelector('td a')?.getAttribute('href'),
                     age,
                     placeOfBirth
-                }as IBandMember
+                } as IBandMember
             )
         }
 
@@ -138,10 +134,16 @@ export class MetalArchivesScraper implements Scraper {
             const link = song.querySelector('td[nowrap="nowrap"] a')?.getAttribute('href');
             if(link)
                 lyrics = await this.getSongLyrics(link)
+
+            const name = song.childNodes[2].text;
+            let duration = song.childNodes.find(n => n.text.includes(":"))?.text;
+
+            if(!name || name.trim() === '') return;
+            duration = duration === name ? song.childNodes[3].text : duration;
             album.songs.push(
                 {
-                    name: song.childNodes[3]?.text,
-                    duration: song.childNodes[4]?.text,
+                    name,
+                    duration,
                     lyrics
                 } as ISong
             )

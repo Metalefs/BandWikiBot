@@ -76,8 +76,8 @@ export class BotService {
       let songs = '';
       for(const song of item.songs){
         songs += `
-          duration: ${song.duration}
           name: ${song.name}
+          duration: ${song.duration}
           link: ${song.link}
           lyrics: ${song.lyrics}
         `
@@ -95,13 +95,13 @@ export class BotService {
     return `
       Name: ${band.name}
       Date: ${band.startDate}
-      Members: ${members}
+      Status: ${band.status}
       Genres: ${band.genres}
       Themes: ${band.themes}
-      Discography: Albums: ${albums}
-      About: ${band.about}
-      Status: ${band.status}
       Label: ${band.label}
+      About: ${band.about}
+      Members: ${members}
+      Discography: Albums: ${albums}
     `
   }
 
