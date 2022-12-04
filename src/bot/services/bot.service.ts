@@ -1,3 +1,4 @@
+import { IBand } from "../shared/interfaces/IBand";
 import { Navigator } from "../shared/navigator";
 
 const MAX_MSG_TXT_LEN = 4096;
@@ -48,12 +49,61 @@ export class BotService {
     await this.searchService.searchMetalArchives({name}).then(async result=>{
       await this.bot.sendMessage(
         chatId,
-        JSON.stringify(result,null,4)
+        this.readableBandInfo(result)
       );
     })
 
   };
 
+  private readableBandInfo(band:IBand){
+    
+    let members = '';
+    for(const member of band.members){
+      members += `
+        name : ${member.name},
+        role : ${member.role},
+        socials : ${member.socials},
+        wiki : ${member.wiki},
+        age : ${member.age},
+        placeOfBirth: ${member.placeOfBirth}
+        ____________________________________
+      `
+    }
+
+    let albums = '';
+    for(const item of band.discography.albums){
+
+      let songs = '';
+      for(const song of item.songs){
+        songs += `
+          duration: ${song.duration}
+          name: ${song.name}
+          link: ${song.link}
+          lyrics: ${song.lyrics}
+        `
+      }
+
+      albums += `
+        name: ${item.name},
+        date: ${item.date},
+        songs: ${songs},
+        link: ${item.link},
+        ____________________________________
+      `
+    }
+    
+    return `
+      Name: ${band.name}
+      Date: ${band.startDate}
+      Members: ${members}
+      Genres: ${band.genres}
+      Themes: ${band.themes}
+      Discography: Albums: ${albums}
+      About: ${band.about}
+      Status: ${band.status}
+      Label: ${band.label}
+    `
+  }
 
   private parseChat(msg, match) {
     return [msg.chat.id, match[1]];
