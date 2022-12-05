@@ -122,7 +122,7 @@ export class MetalArchivesScraper implements Scraper {
     album.name = root.querySelector('#album_info > h1 > a')?.text;
     album.date = root.querySelector('#album_info > dl.float_left > dd:nth-child(4)')?.text;
     
-    const songsTr = root.querySelectorAll('#album_tabs_tracklist > div.ui-tabs-panel-content.block_spacer_top_20 > table tr');
+    const songsTr = root.querySelectorAll('#album_tabs_tracklist > div.ui-tabs-panel-content.block_spacer_top_20 > table tr:not(.displayNone)');
     album.songs = [];
     for (const song of songsTr){
         if(song.childNodes.length > 1){
