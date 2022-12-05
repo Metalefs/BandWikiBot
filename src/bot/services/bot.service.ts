@@ -82,8 +82,8 @@ export class BotService {
       })
 
       albums += `
-        name: ${album.name} (${album.date})
-        songs: ${songs},
+        Album: ${album.name} (${album.date})
+        Songs: ${songs},
         ${album.link},
         ____________________________________
       `
