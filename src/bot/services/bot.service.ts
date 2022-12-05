@@ -82,6 +82,7 @@ export class BotService {
           duration: ${song.duration}
           link: ${song.link}
           lyrics: ${song.lyrics}
+          ____________________________________
         `
       })
 
