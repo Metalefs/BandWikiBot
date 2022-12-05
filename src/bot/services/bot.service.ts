@@ -59,8 +59,7 @@ export class BotService {
     
     let members = '';
     band.members?.forEach(member => {
-      members += `
-        name : ${member.name},
+      members += ` name : ${member.name},
         role : ${member.role},
         socials : ${member.socials},
         wiki : ${member.wiki},
@@ -77,10 +76,8 @@ export class BotService {
 
       let songs = '';
       album?.songs?.forEach(song=>{
-        songs += `
-          ${song.name} - ${song.duration}
-          ____________________________________
-          `
+        songs += `${song.name} - ${song.duration}
+        `
           //${song.link}
       })
 
