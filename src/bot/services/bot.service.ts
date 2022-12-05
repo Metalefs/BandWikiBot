@@ -72,6 +72,9 @@ export class BotService {
 
     let albums = '';
     band.discography?.albums?.forEach(album => {
+
+      if(!album) return;
+
       let songs = '';
       album?.songs?.forEach(song=>{
         songs += `
