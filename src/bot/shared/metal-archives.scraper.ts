@@ -137,7 +137,7 @@ export class MetalArchivesScraper implements Scraper {
             if(!name || name.trim() === '') 
                 name = song.childNodes[3].text
 
-            duration = duration === name ? song.childNodes[3].text : duration;
+            duration = duration === name ? song.childNodes[4].text : duration;
             album.songs.push(
                 {
                     name,
