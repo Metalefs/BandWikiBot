@@ -58,7 +58,7 @@ export class BotService {
   private readableBandInfo(band:IBand){
     
     let members = '';
-    for(const member of band.members){
+    band.members?.forEach(member => {
       members += `
         name : ${member.name},
         role : ${member.role},
@@ -68,13 +68,12 @@ export class BotService {
         placeOfBirth: ${member.placeOfBirth}
         ____________________________________
       `
-    }
+    })
 
     let albums = '';
-    for(const item of band.discography?.albums){
-
+    band.discography?.albums?.forEach(album => {
       let songs = '';
-      item?.songs?.forEach(song=>{
+      album?.songs?.forEach(song=>{
         songs += `
           name: ${song.name}
           duration: ${song.duration}
@@ -84,13 +83,13 @@ export class BotService {
       })
 
       albums += `
-        name: ${item.name},
-        date: ${item.date},
+        name: ${album.name},
+        date: ${album.date},
         songs: ${songs},
-        link: ${item.link},
+        link: ${album.link},
         ____________________________________
       `
-    }
+    })
     
     return `
       Name: ${band.name}
