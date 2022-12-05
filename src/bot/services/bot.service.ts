@@ -74,14 +74,14 @@ export class BotService {
     for(const item of band.discography?.albums){
 
       let songs = '';
-      for(const song of item?.songs){
+      item?.songs?.forEach(song=>{
         songs += `
           name: ${song.name}
           duration: ${song.duration}
           link: ${song.link}
           lyrics: ${song.lyrics}
         `
-      }
+      })
 
       albums += `
         name: ${item.name},

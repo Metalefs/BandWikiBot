@@ -43,13 +43,10 @@ export class MetalArchivesScraper implements Scraper {
         
         searchResult.members = [];
         
-        console.log(membersTr)
-
         for (const member of membersTr){
             console.log('member', member)
             const [age,placeOfBirth] = await this.getMemberAgeAndPlaceOfBirth(member.querySelector('td a').getAttribute('href'))
             
-            console.log([age,placeOfBirth], member)
             searchResult.members.push(
                 {
                     name: member.querySelector('td a')?.text,

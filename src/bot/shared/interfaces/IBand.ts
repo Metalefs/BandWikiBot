@@ -26,7 +26,7 @@ export interface IDiscography {
 export interface IAlbum {
   name: string;
   date?: string;
-  songs: ISong[] | any;
+  songs: ISong[];
   link: string;
 }
 
