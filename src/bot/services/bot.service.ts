@@ -65,7 +65,7 @@ export class BotService {
         socials : ${member.socials},
         wiki : ${member.wiki},
         age : ${member.age},
-        placeOfBirth: ${member.placeOfBirth}
+        place of birth: ${member.placeOfBirth}
         ____________________________________
       `
     })
@@ -78,19 +78,17 @@ export class BotService {
       let songs = '';
       album?.songs?.forEach(song=>{
         songs += `
-          name: ${song.name}
-          duration: ${song.duration}
-          link: ${song.link}
+          ${song.name} - ${song.duration}
+          ${song.link}
           lyrics: ${song.lyrics}
           ____________________________________
         `
       })
 
       albums += `
-        name: ${album.name},
-        date: ${album.date},
+        name: ${album.name} (${album.date})
         songs: ${songs},
-        link: ${album.link},
+        ${album.link},
         ____________________________________
       `
     })

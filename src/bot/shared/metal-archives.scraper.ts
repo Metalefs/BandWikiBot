@@ -131,10 +131,12 @@ export class MetalArchivesScraper implements Scraper {
             if(link)
                 lyrics = await this.getSongLyrics(link)
 
-            const name = song.childNodes[2].text;
+            let name = song.childNodes[2].text;
             let duration = song.childNodes.find(n => n.text.includes(":"))?.text;
 
-            if(!name || name.trim() === '') continue;
+            if(!name || name.trim() === '') 
+                name = song.childNodes[3].text
+
             duration = duration === name ? song.childNodes[3].text : duration;
             album.songs.push(
                 {
