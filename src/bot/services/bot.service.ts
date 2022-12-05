@@ -79,10 +79,9 @@ export class BotService {
       album?.songs?.forEach(song=>{
         songs += `
           ${song.name} - ${song.duration}
-          ${song.link}
-          lyrics: ${song.lyrics}
           ____________________________________
-        `
+          `
+          //${song.link}
       })
 
       albums += `

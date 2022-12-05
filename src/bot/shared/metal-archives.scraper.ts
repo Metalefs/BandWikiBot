@@ -124,7 +124,9 @@ export class MetalArchivesScraper implements Scraper {
     
     const songsTr = root.querySelectorAll('#album_tabs_tracklist > div.ui-tabs-panel-content.block_spacer_top_20 > table tr:not(.displayNone)');
     album.songs = [];
+    let count = 0;
     for (const song of songsTr){
+        if(count === songsTr.length-1) return;
         if(song.childNodes.length > 1){
             let lyrics;
             const link = song.querySelector('td[nowrap="nowrap"] a')?.getAttribute('href');
@@ -146,6 +148,7 @@ export class MetalArchivesScraper implements Scraper {
                 } as ISong
             )
         }
+        count++;
     }
 
     return album;
