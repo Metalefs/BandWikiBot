@@ -4,4 +4,4 @@ Um bot de telegram que faz consultas de bandas e mostra informações relevantes
 
 # Como usar
 
-Buscar band wiki bot no telegram e usar o comando 'search {nome da banda de rock ou metal}
+Buscar band wiki bot no telegram e usar o comando 'search {nome da banda de rock ou metal}'
